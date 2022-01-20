@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: write-access-for-service-binding
+  labels:
+    servicebinding.io/controller: "true"
+rules:
+  - apiGroups: ["app.example.org"]
+    resources: ["apples", "apples/status"]
+    verbs: ["get", "list", "watch", "update", "patch"]
