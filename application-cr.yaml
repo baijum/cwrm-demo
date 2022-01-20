@@ -1,0 +1,6 @@
+apiVersion: app.example.org/v1alpha1
+kind: Apple
+metadata:
+  name: apple1
+spec:
+  volume: myvolume
