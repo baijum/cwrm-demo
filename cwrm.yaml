@@ -5,4 +5,6 @@ metadata:
 spec:
    versions:
    - version: "*"
-     volumes: .spec.volume
+     volumes: .spec.volumes
+     containers:
+        - path: .spec.containers[*]

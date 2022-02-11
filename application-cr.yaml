@@ -3,4 +3,7 @@ kind: Apple
 metadata:
   name: apple1
 spec:
-  volume: myvolume
+  containers:
+  - name: abc
+    env:
+      - name: SOME

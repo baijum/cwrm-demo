@@ -15,8 +15,42 @@ spec:
             spec:
               type: object
               properties:
-                volume:
-                  type: string
+                volumes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      secret:
+                        type: object
+                        properties:
+                          secretName:
+                            type: string
+                containers:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      env:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                      volumeMounts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            mountPath:
+                              type: string
+
   scope: Namespaced
   names:
     plural: apples
